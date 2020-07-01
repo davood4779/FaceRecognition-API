@@ -27,7 +27,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 
-app.get('/' , (req , res) =>{ res.send(database.users) })
+app.get('/' , (req , res) =>{ res.send('its working') })
 app.post('/signin' , signin.handleSignin(db , bcrypt)) //Advanced way (some changes in signin.js => call  (req , res) function after we call handleSign function)
 app.post('/register' , register.handleRegister(db , bcrypt , saltRounds))
 app.get('/profile/:id' , profile.handleProfileGet(db))
