@@ -31,7 +31,6 @@ app.get('/' , (req , res) =>{ res.send('its working') })
 app.post('/signin' , signin.handleSignin(db , bcrypt)) //Advanced way (some changes in signin.js => call  (req , res) function after we call handleSign function)
 app.post('/register' , register.handleRegister(db , bcrypt , saltRounds))
 app.get('/profile/:id' , profile.handleProfileGet(db))
-app.post('/imageurl' , (req , res) => { image.handleApiCall(req , res) }) 
 app.put('/image' , (req , res) => { image.handleImage(req , res , db) }) //Common way (just call handleImage function )
 
 
